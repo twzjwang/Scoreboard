@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="1"
+    tools:context="com.example.android.scoreboard.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/time_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.02"
+            android:text="0:0"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/time_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="50dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <Button
+            android:id="@+id/button_12min"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:onClick="button_12min_click"
+            android:text="12m"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/button_10min"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_toRightOf="@id/button_12min"
+            android:onClick="button_10min_click"
+            android:text="10m"
+            android:textSize="25dp" />
+
+
+        <Button
+            android:id="@+id/button_5min"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_alignParentRight="true"
+            android:onClick="button_5min_click"
+            android:text="5m"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/button_6min"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_toLeftOf="@id/button_5min"
+            android:onClick="button_6min_click"
+            android:text="6m"
+            android:textSize="30dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <Button
+            android:id="@+id/button_24s"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:onClick="button_24s_click"
+            android:text="24s"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/button_14s"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_toRightOf="@id/button_24s"
+            android:onClick="button_14s_click"
+            android:text="14s"
+            android:textSize="25dp" />
+
+
+        <Button
+            android:id="@+id/button_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_alignParentRight="true"
+            android:onClick="button_continue_click"
+            android:text="|>"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/button_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_toLeftOf="@id/button_continue"
+            android:onClick="button_pause_click"
+            android:text="||"
+            android:textSize="30dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/score_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0 : 0"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="60dp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <Button
+            android:id="@+id/button_a_0"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:onClick="button_a_0_click"
+            android:text="-1"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/button_a_1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_toRightOf="@id/button_a_0"
+            android:onClick="button_a_1_click"
+            android:text="+1"
+            android:textSize="30dp" />
+
+
+        <Button
+            android:id="@+id/button_b_1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentRight="true"
+            android:onClick="button_b_1_click"
+            android:text="+1"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/button_b_0"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_toLeftOf="@id/button_b_1"
+            android:onClick="button_b_0_click"
+            android:text="-1"
+            android:textSize="30dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <Button
+            android:id="@+id/button_a_2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:onClick="button_a_2_click"
+            android:text="+2"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/button_a_3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_toRightOf="@id/button_a_2"
+            android:onClick="button_a_3_click"
+            android:text="+3"
+            android:textSize="30dp" />
+
+
+        <Button
+            android:id="@+id/button_b_3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentRight="true"
+            android:onClick="button_b_3_click"
+            android:text="+3"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/button_b_2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_toLeftOf="@id/button_b_3"
+            android:onClick="button_b_2_click"
+            android:text="+2"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="button_reset_click"
+        android:text="reset"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+</LinearLayout>
